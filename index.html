@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Truy Cập Tài Nguyên Lớp Học</title>
+    <title>Trang Truy Cập Tài Nguyên Lớp Học 10A9</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
@@ -18,8 +18,8 @@
         }
 
         body {
-            /* Thay đổi nền gradient để nhẹ nhàng hơn */
-            background: linear-gradient(135deg, #ffffff 0%, var(--bg-light) 100%); 
+            /* NỀN MÀU XANH NHẠT ĐÃ ĐƯỢC CHỈNH SỬA */
+            background: linear-gradient(to bottom, #e0f7fa, #b3e5fc); 
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -31,7 +31,7 @@
             color: var(--text-dark);
         }
 
-        /* Container bao bọc nội dung, giúp trang web đẹp hơn trên màn hình lớn */
+        /* Container bao bọc nội dung */
         .content-wrapper {
             max-width: 900px;
             width: 95%;
@@ -45,6 +45,14 @@
         /* Phần Tiêu đề */
         .header {
             margin-bottom: 40px;
+        }
+
+        /* CSS MỚI CHO LOGO */
+        .class-logo {
+            width: 100px; 
+            height: auto;
+            margin-bottom: 10px; /* Giảm khoảng cách để gần tiêu đề hơn */
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); 
         }
 
         .main-title {
@@ -75,7 +83,7 @@
             border-radius: 10px;
             font-size: 18px;
             font-weight: 700;
-            text-decoration: none; /* RẤT QUAN TRỌNG: Bỏ gạch chân link */
+            text-decoration: none; 
             color: white;
             transition: all 0.3s ease; 
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -145,6 +153,7 @@
 <body>
     <div class="content-wrapper">
         <div class="header">
+            <img src="logo.png" alt="Logo Lớp 10A9" class="class-logo">
             <p class="main-title">
                 <span style="color: #ffc107;">⭐️</span> TRANG LỚP HỌC 10A9 <span style="color: #ffc107;">⭐️</span>
             </p>
