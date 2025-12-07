@@ -7,58 +7,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Định nghĩa các biến CSS (Màu sắc) */
         :root {
-            --color-primary: #1e88e5;    /* Xanh dương chính */
-            --color-secondary: #f7b233;  /* Vàng Drive */
-            --color-success: #00b894;    /* Xanh lá cây */
-            --color-info: #3b82f6;       /* Xanh báo cáo */
-            --bg-light: #e3f2fd;         /* Nền sáng */
+            --color-primary: #1e88e5;
+            --color-secondary: #f7b233;
+            --color-success: #00b894;
+            --color-info: #3b82f6;
+            --bg-light: #e3f2fd;
             --text-dark: #333;
         }
 
-        body {<body oncontextmenu="return false;">
-            /* MÀU XANH ĐẬM VÀ SÂU HƠN */
-            background: linear-gradient(to bottom, #cceeff, #99ccff); 
+        body {
+            background: linear-gradient(to bottom, #cceeff, #99ccff);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; 
+            justify-content: flex-start;
             padding-top: 80px;
             font-family: 'Roboto', sans-serif;
             margin: 0;
             color: var(--text-dark);
         }
 
-        /* Container bao bọc nội dung */
         .content-wrapper {
             max-width: 900px;
             width: 95%;
             padding: 40px;
             background-color: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        /* Phần Tiêu đề */
         .header {
             margin-bottom: 40px;
         }
 
-        /* CSS cho LOGO */
         .class-logo {
-            width: 100px; 
+            width: 100px;
             height: auto;
-            margin-bottom: 10px; 
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); 
+            margin-bottom: 10px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
         }
 
         .main-title {
             font-size: 40px;
             font-weight: 700;
-            color: var(--color-primary); 
+            color: var(--color-primary);
             margin-bottom: 5px;
         }
 
@@ -68,24 +63,22 @@
             font-weight: 400;
         }
 
-        /* Container Chứa Nút */
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 25px; 
+            gap: 25px;
             margin-top: 30px;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
         }
 
-        /* Định kiểu chung cho Nút */
         .button {
             padding: 18px 35px;
             border-radius: 10px;
             font-size: 18px;
             font-weight: 700;
-            text-decoration: none; 
+            text-decoration: none;
             color: white;
-            transition: all 0.3s ease; 
+            transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
@@ -93,71 +86,52 @@
             min-width: 250px;
         }
 
-        /* Hiệu ứng rê chuột (Hover) */
         .button:hover {
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         .icon {
             margin-right: 12px;
-            font-size: 24px; 
+            font-size: 24px;
         }
 
-        /* Màu sắc riêng biệt cho từng loại nút */
-        .button-drive {
-            background-color: var(--color-secondary); /* Vàng */
-        }
+        .button-drive { background-color: var(--color-secondary); }
+        .button-report { background-color: var(--color-info); }
+        .button-schedule { background-color: var(--color-success); }
 
-        .button-report {
-            background-color: var(--color-info); /* Xanh dương */
-        }
-
-        .button-schedule {
-            background-color: var(--color-success); /* Xanh lá */
-        }
-
-        /* Thiết bị di động (Tối ưu Responsive) */
         @media (max-width: 768px) {
-            .content-wrapper {
-                padding: 20px;
-                width: 90%;
-            }
-            .main-title {
-                font-size: 30px;
-            }
-            .button {
-                min-width: 90%; 
-            }
-            .button-container {
-                gap: 15px; 
-            }
+            .content-wrapper { padding: 20px; width: 90%; }
+            .main-title { font-size: 30px; }
+            .button { min-width: 90%; }
+            .button-container { gap: 15px; }
         }
 
-        /* Thêm CSS cho Footer */
         .footer {
-            margin-top: 40px; 
+            margin-top: 40px;
             padding: 10px 0;
             font-size: 14px;
-            color: #999; 
+            color: #999;
             text-align: center;
             width: 100%;
         }
 
         .footer span {
             font-weight: 700;
-            color: var(--color-primary); 
+            color: var(--color-primary);
         }
     </style>
 </head>
-<body>
+
+<!-- ĐÃ THÊM KHÓA CHUỘT PHẢI -->
+<body oncontextmenu="return false;">
     <div class="content-wrapper">
         <div class="header">
             <img src="logo.png" alt="Logo Lớp 10A9" class="class-logo">
             <p class="main-title">
                 <span style="color: #ffc107;">⭐️</span> TRANG LỚP HỌC 10A9 <span style="color: #ffc107;">⭐️</span>
             </p>
-            <p class="sub-text">Chào mừng! Bạn đến với trang web của lớp chúng mình </p>
+            <p class="sub-text">Chào mừng! Bạn đến với trang web của lớp chúng mình</p>
         </div>
 
         <div class="button-container">
@@ -165,7 +139,7 @@
             <a href="https://drive.google.com/drive/folders/1JewIx91xuRII-OvbFKDhHPChCmqYeFJd?usp=drive_link" 
                target="_blank" 
                class="button button-drive">
-                <span class="icon">📁</span> TÀI LIỆU SINH HOẠT LỚP 
+                <span class="icon">📁</span> TÀI LIỆU SINH HOẠT LỚP
             </a>
             
             <a href="https://docs.google.com/spreadsheets/d/14fAtOBooZsAHuExfCvQuvxIFj9rlnqtT2b--F3hyx9w/edit?usp=sharing" 
@@ -181,9 +155,10 @@
             </a>
             
         </div>
-    </div> <footer class="footer">
+    </div>
+
+    <footer class="footer">
         Thiết kế bởi <span>Đặng Minh Phát</span>
     </footer>
-    
 </body>
 </html>
