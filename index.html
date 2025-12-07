@@ -24,7 +24,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Căn trên cùng */
+            justify-content: flex-start; 
             padding-top: 80px;
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -38,7 +38,6 @@
             padding: 40px;
             background-color: #ffffff;
             border-radius: 12px;
-            /* Thêm shadow nổi bật */
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
             text-align: center;
         }
@@ -65,7 +64,7 @@
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 25px; /* Khoảng cách giữa các nút */
+            gap: 25px; 
             margin-top: 30px;
             flex-wrap: wrap; 
         }
@@ -75,11 +74,10 @@
             padding: 18px 35px;
             border-radius: 10px;
             font-size: 18px;
-            /* Lưu ý: Xóa dấu sao ** ở HTML nếu vẫn còn, vì font-weight: 700 đã in đậm */
-            font-weight: 700; 
-            text-decoration: none;
+            font-weight: 700;
+            text-decoration: none; /* RẤT QUAN TRỌNG: Bỏ gạch chân link */
             color: white;
-            transition: all 0.3s ease; /* Chuyển động mượt mà hơn */
+            transition: all 0.3s ease; 
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
@@ -89,13 +87,13 @@
 
         /* Hiệu ứng rê chuột (Hover) */
         .button:hover {
-            transform: translateY(-5px); /* Nhấc lên nhiều hơn */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Shadow đậm hơn */
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
         }
 
         .icon {
             margin-right: 12px;
-            font-size: 24px; /* Biểu tượng lớn hơn */
+            font-size: 24px; 
         }
 
         /* Màu sắc riêng biệt cho từng loại nút */
@@ -121,26 +119,26 @@
                 font-size: 30px;
             }
             .button {
-                min-width: 90%; /* Nút chiếm gần hết chiều rộng trên di động */
+                min-width: 90%; 
             }
             .button-container {
-                gap: 15px; /* Giảm khoảng cách */
+                gap: 15px; 
             }
         }
 
         /* Thêm CSS cho Footer */
         .footer {
-            margin-top: 40px; /* Tạo khoảng cách với phần nội dung chính */
+            margin-top: 40px; 
             padding: 10px 0;
             font-size: 14px;
-            color: #999; /* Màu xám nhạt tinh tế */
+            color: #999; 
             text-align: center;
             width: 100%;
         }
 
         .footer span {
             font-weight: 700;
-            color: var(--color-primary); /* Làm nổi bật tên bằng màu chính */
+            color: var(--color-primary); 
         }
     </style>
 </head>
