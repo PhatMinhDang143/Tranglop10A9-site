@@ -3,126 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Lớp Học</title>
+    <title>Trang Truy Cập Tài Nguyên Lớp Học</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* CSS để tạo giao diện tương tự như hình ảnh bạn cung cấp */
+        /* Định nghĩa các biến CSS (Màu sắc) */
+        :root {
+            --color-primary: #1e88e5;    /* Xanh dương chính */
+            --color-secondary: #f7b233;  /* Vàng Drive */
+            --color-success: #00b894;    /* Xanh lá cây */
+            --color-info: #3b82f6;       /* Xanh báo cáo */
+            --bg-light: #e3f2fd;         /* Nền sáng */
+            --text-dark: #333;
+        }
+
         body {
-            background: linear-gradient(to bottom, #b3e5fc, #e1f5fe); /* Nền xanh gradient nhẹ */
+            /* Thay đổi nền gradient để nhẹ nhàng hơn */
+            background: linear-gradient(135deg, #ffffff 0%, var(--bg-light) 100%); 
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 100px;
-            font-family: Arial, sans-serif;
+            justify-content: flex-start; /* Căn trên cùng */
+            padding-top: 80px;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
+            color: var(--text-dark);
         }
 
-        .header {
+        /* Container bao bọc nội dung, giúp trang web đẹp hơn trên màn hình lớn */
+        .content-wrapper {
+            max-width: 900px;
+            width: 95%;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            /* Thêm shadow nổi bật */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
             text-align: center;
-            margin-bottom: 50px;
+        }
+
+        /* Phần Tiêu đề */
+        .header {
+            margin-bottom: 40px;
         }
 
         .main-title {
-            font-size: 36px;
-            font-weight: bold;
-            color: #1e88e5; /* Màu xanh nổi bật */
-        }
-
-        .sun-icon {
-            color: #ffc107; /* Màu vàng mặt trời */
             font-size: 40px;
-            margin: 0 10px;
+            font-weight: 700;
+            color: var(--color-primary); 
+            margin-bottom: 5px;
         }
 
         .sub-text {
-            font-size: 20px;
-            color: #555;
-            margin-top: 10px;
+            font-size: 18px;
+            color: #666;
+            font-weight: 400;
         }
 
+        /* Container Chứa Nút */
         .button-container {
             display: flex;
             justify-content: center;
-            /* Thay đổi gap để phù hợp với 3 nút */
-            gap: 20px; 
-            margin-top: 40px;
-            flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+            gap: 25px; /* Khoảng cách giữa các nút */
+            margin-top: 30px;
+            flex-wrap: wrap; 
         }
 
+        /* Định kiểu chung cho Nút */
         .button {
-            padding: 15px 30px;
-            border-radius: 8px;
+            padding: 18px 35px;
+            border-radius: 10px;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 700;
             text-decoration: none;
             color: white;
-            transition: all 0.2s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease; /* Chuyển động mượt mà hơn */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
-            min-width: 200px; /* Đảm bảo các nút có chiều rộng tương đối bằng nhau */
+            min-width: 250px;
         }
 
+        /* Hiệu ứng rê chuột (Hover) */
         .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px); /* Nhấc lên nhiều hơn */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Shadow đậm hơn */
         }
 
         .icon {
-            margin-right: 10px;
-            font-size: 20px;
+            margin-right: 12px;
+            font-size: 24px; /* Biểu tượng lớn hơn */
         }
 
-        /* Định kiểu riêng cho từng nút */
+        /* Màu sắc riêng biệt cho từng loại nút */
         .button-drive {
-            /* Màu vàng cho Tài liệu/Drive */
-            background-color: #f7b233; 
-            border: 2px solid #e0a32e;
+            background-color: var(--color-secondary); /* Vàng */
         }
 
         .button-report {
-            /* Màu xanh dương cho Bảng điểm */
-            background-color: #3b82f6; 
-            border: 2px solid #2563eb;
+            background-color: var(--color-info); /* Xanh dương */
         }
 
         .button-schedule {
-            /* Màu xanh lá cây cho Lịch học/Kế hoạch (thêm màu mới) */
-            background-color: #00b894; 
-            border: 2px solid #00997d;
+            background-color: var(--color-success); /* Xanh lá */
+        }
+
+        /* Thiết bị di động (Tối ưu Responsive) */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 20px;
+                width: 90%;
+            }
+            .main-title {
+                font-size: 30px;
+            }
+            .button {
+                min-width: 90%; /* Nút chiếm gần hết chiều rộng trên di động */
+            }
+            .button-container {
+                gap: 15px; /* Giảm khoảng cách */
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <p class="main-title">
-            <span class="sun-icon">☀️</span> Trang lớp học A9 <span class="sun-icon">☀️</span>
-        </p>
-        <p class="sub-text">Chọn chức năng bạn muốn truy cập:</p>
-    </div>
+    <div class="content-wrapper">
+        <div class="header">
+            <p class="main-title">
+                <span style="color: #ffc107;">⭐️</span> TRANG TÀI NGUYÊN LỚP HỌC <span style="color: #ffc107;">⭐️</span>
+            </p>
+            <p class="sub-text">Chào mừng! Vui lòng chọn tài nguyên bạn muốn truy cập:</p>
+        </div>
 
-    <div class="button-container">
-        
-        <a href="https://drive.google.com/drive/folders/1JewIx91xuRII-OvbFKDhHPChCmqYeFJd?usp=drive_link" 
-           target="_blank" 
-           class="button button-drive">
-            <span class="icon">📁</span> Xem tài liệu (Drive)
-        </a>
-        
-        <a href="https://docs.google.com/spreadsheets/d/14fAtOBooZsAHuExfCvQuvxIFj9rlnqtT2b--F3hyx9w/edit?usp=sharing" 
-           target="_blank" 
-           class="button button-report">
-            <span class="icon">📈</span> Bảng điểm Tổng hợp
-        </a>
-        
-        <a href="https://docs.google.com/spreadsheets/d/1yYT3y7vMM5mFR9W7mmg0kLQsJMcmMhrR51lLWwozqo0/edit?gid=0#gid=0" 
-           target="_blank" 
-           class="button button-schedule">
-            <span class="icon">🗓️</span> Lịch học & Kế hoạch
-        </a>
-        
+        <div class="button-container">
+            
+            <a href="https://drive.google.com/drive/folders/1JewIx91xuRII-OvbFKDhHPChCmqYeFJd?usp=drive_link" 
+               target="_blank" 
+               class="button button-drive">
+                <span class="icon">📁</span> **TÀI LIỆU HỌC TẬP (DRIVE)**
+            </a>
+            
+            <a href="https://docs.google.com/spreadsheets/d/14fAtOBooZsAHuExfCvQuvxIFj9rlnqtT2b--F3hyx9w/edit?usp=sharing" 
+               target="_blank" 
+               class="button button-report">
+                <span class="icon">📊</span> **BẢNG ĐIỂM TỔNG HỢP**
+            </a>
+            
+            <a href="https://docs.google.com/spreadsheets/d/1yYT3y7vMM5mFR9W7mmg0kLQsJMcmMhrR51lLWwozqo0/edit?gid=0#gid=0" 
+               target="_blank" 
+               class="button button-schedule">
+                <span class="icon">📅</span> **LỊCH HỌC & KẾ HOẠCH**
+            </a>
+            
+        </div>
     </div>
-
 </body>
 </html>
