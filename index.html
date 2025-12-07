@@ -1,181 +1,21 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Truy Cập Tài Nguyên Lớp Học</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* Định nghĩa các biến CSS (Màu sắc) */
-        :root {
-            --color-primary: #1e88e5;    /* Xanh dương chính */
-            --color-secondary: #f7b233;  /* Vàng Drive */
-            --color-success: #00b894;    /* Xanh lá cây */
-            --color-info: #3b82f6;       /* Xanh báo cáo */
-            --bg-light: #e3f2fd;         /* Nền sáng */
-            --text-dark: #333;
-        }
-
-        body {
-            /* Thay đổi nền gradient để nhẹ nhàng hơn */
-            background: linear-gradient(135deg, #ffffff 0%, var(--bg-light) 100%); 
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start; /* Căn trên cùng */
-            padding-top: 80px;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            color: var(--text-dark);
-        }
-
-        /* Container bao bọc nội dung, giúp trang web đẹp hơn trên màn hình lớn */
-        .content-wrapper {
-            max-width: 900px;
-            width: 95%;
-            padding: 40px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            /* Thêm shadow nổi bật */
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
-            text-align: center;
-        }
-
-        /* Phần Tiêu đề */
-        .header {
-            margin-bottom: 40px;
-        }
-
-        .main-title {
-            font-size: 40px;
-            font-weight: 700;
-            color: var(--color-primary); 
-            margin-bottom: 5px;
-        }
-
-        .sub-text {
-            font-size: 18px;
-            color: #666;
-            font-weight: 400;
-        }
-
-        /* Container Chứa Nút */
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 25px; /* Khoảng cách giữa các nút */
-            margin-top: 30px;
-            flex-wrap: wrap; 
-        }
-
-        /* Định kiểu chung cho Nút */
-        .button {
-            padding: 18px 35px;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            color: white;
-            transition: all 0.3s ease; /* Chuyển động mượt mà hơn */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 250px;
-        }
-
-        /* Hiệu ứng rê chuột (Hover) */
-        .button:hover {
-            transform: translateY(-5px); /* Nhấc lên nhiều hơn */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Shadow đậm hơn */
-        }
-
-        .icon {
-            margin-right: 12px;
-            font-size: 24px; /* Biểu tượng lớn hơn */
-        }
-
-        /* Màu sắc riêng biệt cho từng loại nút */
-        .button-drive {
-            background-color: var(--color-secondary); /* Vàng */
-        }
-
-        .button-report {
-            background-color: var(--color-info); /* Xanh dương */
-        }
-
-        .button-schedule {
-            background-color: var(--color-success); /* Xanh lá */
-        }
-
-        /* Thiết bị di động (Tối ưu Responsive) */
-        @media (max-width: 768px) {
-            .content-wrapper {
-                padding: 20px;
-                width: 90%;
-            }
-            .main-title {
-                font-size: 30px;
-            }
-            .button {
-                min-width: 90%; /* Nút chiếm gần hết chiều rộng trên di động */
-            }
-            .button-container {
-                gap: 15px; /* Giảm khoảng cách */
-            }
-        }
-        
-        /* Thêm CSS cho Footer */
-        .footer {
-            margin-top: 40px; /* Tạo khoảng cách với phần nút bấm */
-            padding: 10px 0;
-            font-size: 14px;
-            color: #999; /* Màu xám nhạt tinh tế */
-            text-align: center;
-            width: 100%;
-        }
-
-        .footer span {
-            font-weight: 700;
-            color: var(--color-primary); /* Làm nổi bật tên bằng màu chính */
-        }
-    </style>
-</head>
-<body>
-    <div class="content-wrapper">
-        <div class="header">
-            <p class="main-title">
-                <span style="color: #ffc107;">⭐️</span> TRANG TÀI NGUYÊN LỚP HỌC <span style="color: #ffc107;">⭐️</span>
-            </p>
-            <p class="sub-text">Chào mừng! Vui lòng chọn tài nguyên bạn muốn truy cập:</p>
-        </div>
-
-        <div class="button-container">
+<div class="button-container">
             
             <a href="https://drive.google.com/drive/folders/1JewIx91xuRII-OvbFKDhHPChCmqYeFJd?usp=drive_link" 
                target="_blank" 
                class="button button-drive">
-                <span class="icon">📁</span> **TÀI LIỆU SINH HOẠT LỚP**
+                <span class="icon">📁</span> TÀI LIỆU SINH HOẠT LỚP
             </a>
             
             <a href="https://docs.google.com/spreadsheets/d/14fAtOBooZsAHuExfCvQuvxIFj9rlnqtT2b--F3hyx9w/edit?usp=sharing" 
                target="_blank" 
                class="button button-report">
-                <span class="icon">📊</span> **BẢNG ĐIỂM THI ĐUA TỔ**
+                <span class="icon">📊</span> BẢNG ĐIỂM THI ĐUA TỔ
             </a>
             
             <a href="https://docs.google.com/spreadsheets/d/1yYT3y7vMM5mFR9W7mmg0kLQsJMcmMhrR51lLWwozqo0/edit?gid=0#gid=0" 
                target="_blank" 
                class="button button-schedule">
-                <span class="icon">📅</span> **KẾ HOẠCH VÀ PHONG TRÀO**
+                <span class="icon">📅</span> KẾ HOẠCH VÀ PHONG TRÀO
             </a>
             
         </div>
-    </div> <div class="footer">
-        Thiết kế bởi <span>Đặng Minh Phát</span>
-    </div>
-    
-</body>
-</html>
